@@ -1,0 +1,129 @@
+* {margin: 0; padding: 0;}
+a {color: black; text-decoration: none;}
+li {list-style: none;}
+img {display: block;}
+        
+
+/* ----------------------------lnb---------------------------- */
+.lnb {
+    width: 100%;
+    height: 70px;
+    background-color: rgba(204, 204, 204, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.lnb li {
+    float: left;
+    padding-left: 40px;
+}
+.lnb .on a {
+    color: #ffc845;
+}
+.lnb li img {
+    width: 150px;
+    margin-top: 26.5px;
+    padding-right: 30px;
+}
+.lnb li a {
+    color: #666;
+    font-size: 13px;
+    line-height: 70px;
+    transition: color 0.1s;
+}
+
+
+.wrap section {
+    width: 100%; 
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ----------------------------page01---------------------------- */
+.page01 {position: relative;}
+.page01 .home_menu {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.page01 .home_menu .maserati_logo {
+    display: block;
+    width: 90px;
+    margin-top: 40px;
+    margin-left: 40px;
+    float: left;
+}
+.page01 .home_menu .maserati_logo img {width: 100%;}
+.page01 .home_menu .menu {
+    float: right;
+    margin-top: 40px;
+    margin-right: 40px;
+}
+.page01 .home_menu .menu li {
+    float: left;
+    padding-left: 70px;
+}
+.page01 .home_menu .menu li a {
+    color: white;
+    font-size: 14px;
+}
+.page01 .homeSwiper {
+    width: 100%; height: 100vh; 
+    position: relative; 
+}
+.page01 .homeSwiper .swiper-button-prev {display: none;}
+.page01 .homeSwiper .swiper-button-next {
+    width: 70px;
+    height: 70px;
+    background: url(./images/next.png) no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    right: 30px;
+    opacity: 0.5;
+}
+
+.page01 .homeSwiper .swiper-button-prev {
+    width: 70px;
+    height: 70px;
+    background: url(./images/prev.png) no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    left: 30px;
+    opacity: 0.5;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.page01 .homeSwiper .swiper-slide video {
+    width: 100%;
+}
+.page01 .homeSwiper .swiper-slide .grecale_logo {
+    width: 1000px;
+    opacity: 0.6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.page01 .homeSwiper .swiper-slide .grecale_logo img {width: 100%;}
+.page01 .homeSwiper .swiper-slide .img_box {
+    width: 100%; height: 100vh;
+}
+.page01 .homeSwiper .swiper-slide .img_box img {
+    width: 100%;
+}
+/* ----------------------------page02---------------------------- */
+.page02 .img_box {
+    width: 100%; height: 100vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+.page2 .img_box img {
+    width: 100%;
+}

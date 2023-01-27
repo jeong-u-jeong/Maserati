@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Gelasio&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+
 * {margin: 0; padding: 0;}
 a {color: black; text-decoration: none;}
 li {list-style: none;}
@@ -8,7 +12,7 @@ img {display: block;}
 .lnb {
     width: 100%;
     height: 70px;
-    background-color: rgba(204, 204, 204, 0.2);
+    background-color: #111;
     position: fixed;
     top: 0;
     left: 0;
@@ -19,15 +23,16 @@ img {display: block;}
     padding-left: 40px;
 }
 .lnb .on a {
-    color: #ffc845;
+    color: #a48374;
 }
 .lnb li img {
     width: 150px;
     margin-top: 26.5px;
     padding-right: 30px;
+    opacity: 0.9;
 }
 .lnb li a {
-    color: #666;
+    color: #ccc;
     font-size: 13px;
     line-height: 70px;
     transition: color 0.1s;
@@ -82,7 +87,7 @@ img {display: block;}
     background-size: 100% auto;
     background-position: center;
     right: 30px;
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
 .page01 .homeSwiper .swiper-button-prev {
@@ -92,7 +97,7 @@ img {display: block;}
     background-size: 100% auto;
     background-position: center;
     left: 30px;
-    opacity: 0.5;
+    opacity: 0.4;
 }
 .swiper-button-next::after,
 .swiper-button-prev::after {
@@ -117,13 +122,148 @@ img {display: block;}
 .page01 .homeSwiper .swiper-slide .img_box img {
     width: 100%;
 }
+.page01 .homeSwiper .slide2 .text_box {
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    display: none;
+}
+.page01 .homeSwiper .slide2 p {
+    font-size: 17px;
+}
+.page01 .homeSwiper .slide2 p:nth-child(2) {
+    font-family: 'Gelasio', serif;
+    font-size: 50px;
+}
+.page01 .homeSwiper .slide2 p:nth-child(2) span {color: #ffc845;}
+.page01 .homeSwiper .slide3 p {
+    color: white;
+    font-size: 90px;
+    font-family: 'Gelasio', serif;
+    position: absolute;
+    right: 100px;
+    opacity: 0.8;
+}
+.page01 .homeSwiper .slide3 .p1 {bottom: 260px;}
+.page01 .homeSwiper .slide3 .p2 {
+    font-size: 80px;
+    font-family: 'Playball', cursive;
+    bottom: 165px;
+    right: -500px;
+    opacity: 1;
+    transition: right 1.5s;
+}
+.page01 .homeSwiper .slide3 .p3 {bottom: 50px;}
+
 /* ----------------------------page02---------------------------- */
-.page02 .img_box {
-    width: 100%; height: 100vh;
-    overflow: hidden;
+.page02 {
     position: relative;
-    z-index: 2;
+    background-color: black;
 }
-.page2 .img_box img {
+.page02 .contents {
+    width: 1319px;
+    height: 675px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 2s;
+}
+.page02 .contents>div {
+    width: 647px; height: 675px;
+    float: left;
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+.page02 .contents .ex {
+    margin-right: 25px;
+}
+.page02 .contents>div img {width: 100%;}
+.page02 .contents div .text {
     width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    line-height: 675px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s;
 }
+.page02 .contents div:hover .text {
+    opacity: 1;
+}
+.page02 .popup {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    z-index: 2;
+    transition: right 1s;
+}
+
+/* -----page02_popup----- */
+.page02 .popup .btn_close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+.page02 .popup .btn_close img {width: 100%;}
+.page02 .popup .designSwiper {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    cursor: url(./images/drag_cursor.png) 50 50, auto;
+}
+.page02 .popup .designSwiper .swiper-slide {
+    width: 70%;
+}
+.page02 .popup .designSwiper .img_box {
+    width: 60%;
+    float: left;
+}
+.page02 .popup .designSwiper .img_box img {width: 100%;}
+.page02 .popup .designSwiper .text_box {
+    width: 40%;
+    float: left;
+}
+.page02 .popup .designSwiper .text_box .title {
+    font-size: 50px;
+    font-family: 'Gelasio', serif;
+    margin-top: 80px;
+    margin-left: 50px;
+    text-decoration: underline #a48374;
+}
+.page02 .popup .designSwiper .text_box .text {
+    font-size: 25px;
+    font-family: 'Gowun Batang', serif;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+.noScroll {
+    overflow: hidden; 
+    width: 100%;
+    height: 100%;
+}
+
+/* ----------------------------page03---------------------------- */
+.page03 .contents {
+    width: 1319px;
+    height: 100%;
+    margin: 0 auto;
+}
+/* ----------------------------page04---------------------------- */
+/* ----------------------------page05---------------------------- */

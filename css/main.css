@@ -283,6 +283,7 @@ img {display: block;}
     justify-content: space-between;
     border-bottom: 6px solid rgba(204, 204, 204, 0.5);
     box-sizing: border-box;
+    margin-top: 20px;
 }
 .page03 .contents .label_box label {
     width: 311px;
@@ -372,7 +373,7 @@ img {display: block;}
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    background-color: rgba(238, 238, 238, 0.9);
+    background-color: rgb(255, 255, 255);
     position: absolute;
     animation-name: dot;
     animation-duration: 1s;
@@ -381,9 +382,9 @@ img {display: block;}
     cursor: pointer;
 }
 @keyframes dot {
-    0% {background-color: rgba(238, 238, 238, 0.9);}
+    0% {background-color: rgb(255, 255, 255);}
     50% {background-color: rgba(238, 238, 238, 0.5);}
-    100% {background-color: rgba(238, 238, 238, 0.9);}
+    100% {background-color: rgb(255, 255, 255);}
 }
 .page03 .contents .container_box .container2 .dot1 {
     top: 330px;
@@ -550,4 +551,218 @@ img {display: block;}
 }
 
 /* ----------------------------page04---------------------------- */
+.page04 {position: relative;}
+.page04 .contents {
+    width: 1319px;
+    height: 950px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.page04 .contents>.title_box {
+    width: 600px;
+    font-size: 75px;
+    font-family: 'Gelasio', serif;
+    line-height: 60px;
+    margin-top: 120px;
+    float: left;
+}
+.page04 .contents .title_box .title1 span {
+    font-family: 'Playball', cursive;
+}
+.page04 .contents .title_box .title2 {
+    margin-left: 140px;
+}
+.page04 .contents .title_box .title2 {
+    color: rgb(227, 0, 0);
+} 
+.page04 .contents>.text {
+    width: 694px;
+    font-size: 19px;
+    line-height: 33px;
+    float: left;
+    margin-top: 125px;
+    margin-bottom: 50px;
+    margin-left: 25px;
+}
+.page04 .contents .container {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+.page04 .contents .container .img_box {
+    width: 647px;
+    height: 287.5px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    display: none;
+}
+.page04 .contents .container .top {
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+.page04 .contents .container>div>.img_box:nth-child(1) {margin-right: 25px;}
+.page04 .contents .container>div .img_box img {width: 100%;}
+.page04 .contents .container>div .img_box:hover .text_box {opacity: 1;}
+.page04 .contents .container>div .img_box .text_box {
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.7s;
+}
+.page04 .contents .container>div .img_box .text_box .title {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+}
+.page04 .contents .container>div .img_box .text_box .text {
+    width: 567px;
+    font-size: 19px;
+    line-height: 33px;
+    padding: 20px 40px;
+}
+
 /* ----------------------------page05---------------------------- */
+#collection1, #collection2, #collection3 {display: none;}
+#collection1:checked ~.collection_box .collection1, #collection2:checked ~.collection_box .collection2,
+#collection3:checked ~.collection_box .collection3 {opacity: 1;}
+#collection1:checked ~.label_box .collection_lab1, #collection2:checked ~.label_box .collection_lab2, #collection3:checked ~.label_box .collection_lab3 {
+    color: #aaa;
+    border-top: 6px solid #aaa;
+}
+
+.page05 {position: relative;}
+.page05 .contents {
+    width: 1319px;
+    height: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.page05 .contents .title_box {
+    width: 700px;
+    height: 150px;
+    font-size: 75px;
+    font-family: 'Gelasio', serif;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 70px;
+    overflow: hidden;
+}
+.page05 .contents .title_box .title2 {
+    color: rgb(227, 0, 0);
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    transition: all 1s;
+}
+.page05 .contents .collection_box {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+.page05 .contents .collection_box .collection {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.page05 .contents .collection_box .collection .text_box {
+    width: 1319px;
+    height: 350px;
+    background-color: rgba(238, 238, 238, 0.4);
+    padding: 80px;
+    margin-top: 40px;
+}
+.page05 .contents .collection_box .collection .text_box p {
+    width: 535px;
+    color: #888;
+    font-size: 23px;
+    line-height: 40px;
+}
+.page05 .contents .collection_box .collection .text_box p span {
+    color: black;
+    margin-left: 150px;
+}
+.page05 .contents .collection_box .collection .text_box p:nth-child(1) {
+    color: black;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+.page05 .contents .collection_box .collection .text_box .btn_my {
+    display: block;
+    width: 198px;
+    height: 52px;
+    color: white;
+    font-size: 18px;
+    line-height: 52px;
+    text-align: center;
+    background-color: rgb(68, 122, 250);
+    margin-top: 50px;
+}
+.page05 .contents .collection_box .collection .img {
+    width: 759px;
+    height: 379.5px;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    transition: all 0.5s;
+}
+.page05 .contents .collection_box .collection .img img {width: 100%;}
+.page05 .contents .label_box {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.page05 .contents .label_box label {
+    width: 423px;
+    height: 60px;
+    color: rgba(204, 204, 204, 0.5);
+    font-size: 25px;
+    line-height: 60px;
+    text-align: center;
+    font-weight: bold;
+    border-top: 6px solid rgba(204, 204, 204, 0);
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+/* ----------------------------page06---------------------------- */
+.page06 {
+    color: white;
+    background-color: black;
+}
+.page06 .brochure {
+    width: 1319px;
+    margin: 0 auto;
+    margin-top: 80px;
+    overflow: hidden;
+}
+.page06 .brochure .text_box {
+    width: 647px;
+    height: 430px;
+    margin-right: 25px;
+    background-color: #ccc;
+    float: left;
+}
+.page06 .brochure .img {
+    width: 647px;
+    height: 430px;
+    background-color: #ccc;
+    float: left;
+}

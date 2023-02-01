@@ -235,14 +235,9 @@ $(function(){
     drop.on('click', function(){
         $(this).css('height', '331px');
         $(this).find('.plus').hide();
-        $(this).find('.minus').show();
         $(this).siblings().css('height', '70px');
         $(this).siblings().find('.plus').show();
         $(this).siblings().find('.minus').hide();
     });
-    
-    // $('.minus').on('click', function(){
-    //     $(this).parent().css('height', '70px');
-    // });
 });
 
